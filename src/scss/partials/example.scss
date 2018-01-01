@@ -1,0 +1,10 @@
+$red: red;
+
+body {
+  background-image: url(../images/pattern.png);
+  display: flex;
+}
+
+h1 {
+  color: $red;
+}
