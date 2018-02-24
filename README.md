@@ -7,8 +7,8 @@ Does the following:
 * Babel transpiling for JavaScript (targets last two browser versions, and also any other browsers with a global usage of over 1%)
 * Sass (.scss) compilation
 * PostCSS (autoprefixer)
-* Source maps
-* Minification of images loaded with file-loader (in production only)
+* Source maps for JS and CSS files
+* Minification of any images loaded with `file-loader` (in production only)
 * Linting with ESLint
 * Code formatting with Prettier (integrated into ESLint)
 
@@ -36,7 +36,7 @@ The ESLint configuration includes the plugins `eslint-config-prettier` and `esli
 
 ### ESLint plugins
 
-See this repo for a list of plugins: https://github.com/dustinspecker/awesome-eslint
+See this repo for a list of other plugins you could use: https://github.com/dustinspecker/awesome-eslint
 
 #### `eslint-plugin-compat`
 
