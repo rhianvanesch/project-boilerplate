@@ -6,12 +6,9 @@
   "scripts": {
     "dev": "webpack --env.env=dev",
     "prod": "webpack -p --env.env=prod",
-    "prettier": "prettier --write src/**/*.js",
     "lint": "eslint --fix src/**/*.js"
   },
-  "keywords": [
-    "webpack"
-  ],
+  "keywords": ["webpack"],
   "author": "Rhian van Esch",
   "license": "ISC",
   "devDependencies": {
