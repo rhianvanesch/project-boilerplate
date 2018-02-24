@@ -5,11 +5,10 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack --env.env=dev",
-    "prod": "webpack -p --env.env=prod"
+    "prod": "webpack -p --env.env=prod",
+    "prettier": "prettier --write src/**/*.js"
   },
-  "keywords": [
-    "webpack"
-  ],
+  "keywords": ["webpack"],
   "author": "Rhian van Esch",
   "license": "ISC",
   "devDependencies": {
@@ -25,6 +24,7 @@
     "postcss": "^6.0.19",
     "postcss-cssnext": "^3.1.0",
     "postcss-loader": "^2.1.0",
+    "prettier": "^1.10.2",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.20.2",
     "webpack": "^3.11.0",
