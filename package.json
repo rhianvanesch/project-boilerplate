@@ -4,12 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --env.env=dev",
+    "dev": "webpack --env.env=dev",
     "prod": "webpack -p --env.env=prod"
   },
-  "keywords": [
-    "webpack"
-  ],
+  "keywords": ["webpack"],
   "author": "Rhian van Esch",
   "license": "ISC",
   "devDependencies": {
