@@ -1,5 +1,4 @@
-# Browsers that we support
+# Supported browsers
 
 last 2 versions
-safari >= 8
-iOS >= 9
+> 1%
