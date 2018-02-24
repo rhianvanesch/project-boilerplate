@@ -4,12 +4,12 @@ My default tooling setup for new projects.
 
 Does the following:
 
-* Babel transpiling for JavaScript (targets last two browser versions, and also any other browsers with a global usage of over 1%)
-* Sass (.scss) compilation
-* PostCSS (autoprefixer)
-* Source maps for JS and CSS files
-* Minification of any images loaded with `file-loader` (in production only)
-* Linting with ESLint
+* Babel transpiling for JavaScript - uses the [browserslist](https://github.com/ai/browserslist) string "last 2 versions, > 1%" to target [these browsers](http://browserl.ist/?q=last+2+versions%2C+%3E+1%25)
+* Sass to CSS compilation
+* Automatic vendor prefixing with PostCSS - also uses the browserslist configuration to target [these browsers](http://browserl.ist/?q=last+2+versions%2C+%3E+1%25)
+* Creates source maps for your JS and CSS files
+* Automatic image minification - uses webpack's `file-loader` to minify images mentioned in your CSS/JS files (in production only)
+* Linting of JavaScript files with ESLint
 * Code formatting with Prettier (integrated into ESLint)
 
 ---
