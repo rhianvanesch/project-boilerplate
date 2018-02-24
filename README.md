@@ -1,6 +1,6 @@
-# webpack-default
+# project-boilerplate
 
-My current Webpack setup.
+My default tooling setup for new projects.
 
 Does the following:
 
