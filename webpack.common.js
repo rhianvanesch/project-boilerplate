@@ -1,5 +1,4 @@
 const path = require("path");
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 
 module.exports = {
@@ -9,25 +8,14 @@ module.exports = {
   },
   output: {
     filename: "assets/js/[name].bundle.js",
-    path: path.join(__dirname, "dist")
+    path: path.join(__dirname, "dist") // eslint-disable-line
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js$/,
         loader: "babel-loader",
         exclude: /node_modules/
-      },
-      {
-        test: /\.scss$/,
-        use: ExtractTextPlugin.extract({
-          fallback: "style-loader",
-          use: [
-            "css-loader", // translates CSS into CommonJS
-            "postcss-loader", // adds PostCSS processing
-            "sass-loader" // compiles Sass to CSS
-          ]
-        })
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
@@ -43,5 +31,5 @@ module.exports = {
       }
     ]
   },
-  plugins: [new CleanWebpackPlugin("dist/assets"), new ExtractTextPlugin("assets/css/style.css")]
+  plugins: [new CleanWebpackPlugin("dist/assets")]
 };

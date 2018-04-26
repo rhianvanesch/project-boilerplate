@@ -1,14 +1,24 @@
 const devConfig = {
+  mode: "development",
   devtool: "eval-source-map",
   module: {
-    loaders: [
+    rules: [
+      {
+        test: /\.scss$/,
+        use: [
+          "style-loader", // Inline CSS in <head>
+          "css-loader", // translates CSS into CommonJS
+          "postcss-loader", // adds PostCSS processing
+          "sass-loader" // compiles Sass to CSS
+        ]
+      },
       {
         test: /\.(png|svg|jpe?g|gif|webp)$/,
         use: [
           {
             loader: "file-loader",
             options: {
-              name: "[name].[md5:hash:base64:8].[ext]",
+              name: "[name].[ext]",
               outputPath: "/assets/images/"
             }
           }

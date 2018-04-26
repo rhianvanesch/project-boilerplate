@@ -1,7 +1,19 @@
+const MiniCSSExtractPlugin = require("mini-css-extract-plugin");
+
 const prodConfig = {
+  mode: "production",
   devtool: "source-map",
   module: {
-    loaders: [
+    rules: [
+      {
+        test: /\.scss$/,
+        use: [
+          MiniCSSExtractPlugin.loader, // Extract CSS to file
+          "css-loader", // translates CSS into CommonJS
+          "postcss-loader", // adds PostCSS processing
+          "sass-loader" // compiles Sass to CSS
+        ]
+      },
       {
         test: /\.(png|svg|jpe?g|gif|webp)$/,
         use: [
@@ -34,7 +46,12 @@ const prodConfig = {
         ]
       }
     ]
-  }
+  },
+  plugins: [
+    new MiniCSSExtractPlugin({
+      filename: "assets/css/style.css"
+    })
+  ]
 };
 
 module.exports = prodConfig;
