@@ -49,7 +49,7 @@ const prodConfig = {
   },
   plugins: [
     new MiniCSSExtractPlugin({
-      filename: "assets/css/style.css"
+      filename: "assets/css/style.[hash].css"
     })
   ]
 };

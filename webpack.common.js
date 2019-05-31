@@ -1,5 +1,6 @@
 const path = require("path");
-const CleanWebpackPlugin = require("clean-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: {
@@ -7,7 +8,7 @@ module.exports = {
     secondary: "./src/js/secondary.js"
   },
   output: {
-    filename: "assets/js/[name].bundle.js",
+    filename: "assets/js/[name].[hash].js",
     path: path.join(__dirname, "dist") // eslint-disable-line
   },
   module: {
@@ -31,5 +32,10 @@ module.exports = {
       }
     ]
   },
-  plugins: [new CleanWebpackPlugin("dist/assets")]
+  plugins: [
+    new CleanWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      template: "src/index.html"
+    })
+  ]
 };
